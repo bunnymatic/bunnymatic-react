@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import ReactHoverObserver from 'react-hover-observer';
+import classnames from 'classnames';
 
 class NavItem extends Component {
   render() {
@@ -25,6 +27,11 @@ const navItems=[
 
 class Navigation extends Component {
 
+  constructor() {
+    super()
+    this.state = {hovering: false}
+  }
+
   iconOrName(item) {
     if (item.icon) {
       return (
@@ -32,6 +39,20 @@ class Navigation extends Component {
       );
     }
     return item.name;
+  }
+
+  startHovering(ev) {
+    console.log('start',ev, this);
+    if (this && this.setState) {
+      this.setState({hovering: true})
+    }
+  }
+
+  stopHovering(ev) {
+    console.log('stop',ev, this);
+    if (this && this.setState) {
+      this.setState({hovering: false})
+    }
   }
 
   navItems() {
@@ -47,12 +68,14 @@ class Navigation extends Component {
 
   render() {
     return(
-      <nav className="navigation">
+      <nav
+        onMouseOver={ this.startHovering.bind(this) }
+        onMouseOut={ this.stopHovering.bind(this) }
+        className={ classnames( "navigation", {"hovering": this.state.hovering} ) }>
         {this.navItems()}
       </nav>
     )
   }
 }
 
-export { NavItem };
 export default Navigation;

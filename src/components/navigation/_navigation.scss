@@ -3,6 +3,14 @@
   padding: 0 20px;
   justify-content: center;
   background-color: $lime-2;
+  min-height: 100%;
+  transition: flex-basis 1200ms $easeOutCubic;
+  flex-basis: 0%;
+
+  &.hovering {
+    transition: flex-basis 400ms $easeOutCubic;
+    flex-basis: 45%;
+  }
 }
 .navigation__item {
   margin-top: 20px;

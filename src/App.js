@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import './stylesheets/_reset.scss'
-import './components/navigation/_navigation.scss';
-import './App.css';
+import './App.scss';
 import Navigation from './components/navigation/navigation';
 import Main from './pages/main';
 
