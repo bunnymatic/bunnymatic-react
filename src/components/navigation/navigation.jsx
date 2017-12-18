@@ -1,11 +1,42 @@
 import React, { Component } from 'react'
-import ReactHoverObserver from 'react-hover-observer';
 import classnames from 'classnames';
 
-class NavItem extends Component {
-  render() {
+class NavigationItem extends Component {
+  constructor(thing) {
+    console.log(thing);
+    super()
+    this.state = {hovering: false}
+  }
+
+  startHovering(ev) {
+    this.setState({hovering: true})
+  }
+
+  stopHovering(ev) {
+    this.setState({hovering: false})
+  }
+
+  iconOrName(item) {
+    if (item.icon) {
+      return (
+        <i title={item.title} className={item.icon} />
+      );
+    }
+    return item.name;
+  }
+
+  render(props) {
+    console.log('render nav item', props);
+    console.log('render nav item', this.props);
     return (
-      <div title={this.props.title}>{this.props.title}</div>
+      <div
+      onMouseOver={ this.startHovering.bind(this) }
+        onMouseOut={ this.stopHovering.bind(this) }
+        className={ classnames( "navigation__item", {"hovering": this.state.hovering} ) } >
+        <a href={this.props.path} title={this.props.title}>
+          {this.iconOrName(this.props)}
+        </a>
+      </div>
     );
   }
 }
@@ -32,35 +63,19 @@ class Navigation extends Component {
     this.state = {hovering: false}
   }
 
-  iconOrName(item) {
-    if (item.icon) {
-      return (
-        <i title={item.title} className={item.icon} />
-      );
-    }
-    return item.name;
-  }
-
   startHovering(ev) {
-    console.log('start',ev, this);
-    if (this && this.setState) {
-      this.setState({hovering: true})
-    }
+    this.setState({hovering: true})
   }
 
   stopHovering(ev) {
-    console.log('stop',ev, this);
-    if (this && this.setState) {
-      this.setState({hovering: false})
-    }
+    this.setState({hovering: false})
   }
 
   navItems() {
     const items = navItems.map( (item) => {
+      console.log("sending", item);
       return (
-        <div className="navigation__item" title={item.title} key={item.name}>
-          <a href={item.path}>{this.iconOrName(item)}</a>
-        </div>
+        <NavigationItem { ...item } key={item.name} />
       );
     });
     return items;

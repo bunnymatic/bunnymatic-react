@@ -15,8 +15,10 @@
 .navigation__item {
   margin-top: 20px;
   transition: font-size 200ms $easeOutCubic;
-  &:hover {
+  &.hovering {
     font-size:40px;
   }
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

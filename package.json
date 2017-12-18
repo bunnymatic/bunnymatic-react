@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "animate.css": "^3.5.2",
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
     "babel-eslint": "7.2.3",
@@ -36,7 +37,6 @@
     "react": "^16.2.0",
     "react-dev-utils": "^4.2.1",
     "react-dom": "^16.2.0",
-    "react-hover-observer": "^2.0.2",
     "style-loader": "0.19.0",
     "sw-precache-webpack-plugin": "0.11.4",
     "url-loader": "0.6.2",
@@ -86,7 +86,12 @@
   },
   "babel": {
     "presets": [
-      [ "latest", {"es2015": false} ],
+      [
+        "latest",
+        {
+          "es2015": false
+        }
+      ],
       "react-app"
     ]
   },
