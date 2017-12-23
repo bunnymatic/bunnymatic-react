@@ -1,8 +1,8 @@
 .navigation {
-  box-shadow: 0px 1px 2px $lime-4;
+  box-shadow: 0px 1px 2px $lime-2;
   padding: 0 20px;
   justify-content: center;
-  background-color: $lime-2;
+  background-color: $lime-4;
   min-height: 100%;
   transition: flex-basis 1200ms $easeOutCubic;
   flex-basis: 0%;
@@ -16,7 +16,7 @@
   margin-top: 20px;
   transition: font-size 200ms $easeOutCubic;
   &.hovering {
-    font-size:40px;
+    font-size: 100px;
   }
   display: flex;
   align-items: center;
