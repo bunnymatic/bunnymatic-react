@@ -30,9 +30,9 @@ class NavigationItem extends Component {
     console.log('render nav item', this.props);
     return (
       <div
-      onMouseOver={ this.startHovering.bind(this) }
+        onMouseOver={ this.startHovering.bind(this) }
         onMouseOut={ this.stopHovering.bind(this) }
-        className={ classnames( "navigation__item", {"hovering": this.state.hovering} ) } >
+        className={ classnames( "navigation__item animated bounceInLeft", {"hovering": this.state.hovering} ) } >
         <a href={this.props.path} title={this.props.title}>
           {this.iconOrName(this.props)}
         </a>
@@ -86,7 +86,7 @@ class Navigation extends Component {
       <nav
         onMouseOver={ this.startHovering.bind(this) }
         onMouseOut={ this.stopHovering.bind(this) }
-        className={ classnames( "navigation", {"hovering": this.state.hovering} ) }>
+        className={ classnames( "navigation animated bounceInLeft", {"hovering": this.state.hovering} ) }>
         {this.navItems()}
       </nav>
     )
