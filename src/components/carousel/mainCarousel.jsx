@@ -2,41 +2,42 @@ import React, { Component } from 'react'
 import { Carousel } from 'react-responsive-carousel';
 import classnames from 'classnames';
 import { connect } from 'react-redux';
+import { fetchImage } from '../../actions/index.js';
+const mapStateToProps = state => {
+  return state
+};
 
 class MainCarousel extends Component {
 
-  constructor() {
-    super();
-    this.state = {
-      items: [
-        {
-          image: '1.jpg',
-          name: 'legend 1'
-        },
-        {
-          image: '2.jpg',
-          name: 'legend 2'
-        },
-        {
-          image: '3.jpg',
-          name: 'legend 3'
-        },
-      ]
-    }
+  constructor(props) {
+    super(props);
   }
 
-  renderItem(item) {
-    return <div><img src={item.image}/><p className="legend">{item.name}</p></div>;
+  addImage() {
+    this.props.dispatch(fetchImage);
+  }
+
+  renderItem(item, idx) {
+    idx = idx || 0
+    return <div key={idx}><img src={item.image}/><p className="legend">{item.name}</p></div>;
   }
 
   render() {
-    const { items } = this.state;
-
-    return(
-      <Carousel>
-        {items.map(item => this.renderItem(item))}
-      </Carousel>
-    )
+    const imgs = this.props.images.images;
+    console.log("IMAGES", imgs);
+    if (imgs) {
+      return(
+        <div className="main-carousel" >
+          <Carousel>
+            {imgs.map((item, idx) => this.renderItem(item, idx))}
+          </Carousel>
+          <button onClick={this.addImage.bind(this)}>add image</button>
+        </div>
+      )
+    }
+    else {
+      return <div className="main-carousel" ></div>
+    }
   }
 }
 
@@ -44,4 +45,4 @@ export { MainCarousel };
 
 //export default connect(({ someReducer }) => ({}))(MainCarousel)
 
-export default connect(() => ({}))(MainCarousel)
+export default connect(mapStateToProps)(MainCarousel)

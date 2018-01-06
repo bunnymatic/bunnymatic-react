@@ -8,11 +8,18 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 
 import reducers from './reducers';
+import logger from 'redux-logger'
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+// Logger with default options
+const store = createStore(
+  reducers,
+  applyMiddleware(logger)
+)
+
+//const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
+  <Provider store={store}>
     <App />
   </Provider>
   , document.getElementById('root'));
