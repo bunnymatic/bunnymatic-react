@@ -1,0 +1,96 @@
+.app-container {
+  animation: colorer 10s infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.coming-soon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#bunnymatic {
+  margin: auto;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+h1 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  font-size: 40px;
+  color: white;
+  margin: auto;
+  z-index: 1;
+  text-align: center;
+  padding: 40px;
+  transform: translateZ(100px) translateX(-50%) translateY(-50%);
+}
+.scaler {
+  animation: pulse 4s infinite;
+  animation-delay: 1s;
+}
+
+.zoomer {
+  animation: zoomer 3s infinite;
+  animation-delay: 2s;
+}
+
+.spinner {
+  width: 25%;
+  height: 25%;
+  animation: fullspin 5s infinite;
+  animation-delay: 3s;
+}
+
+@keyframes zoomer {
+  from, to {
+    transform: translateX(0px) translateY(0px);
+  }
+  25% {
+    transform: translateX(80%) translateY(60%);
+  }
+  50% {
+    transform: translateX(-80%) translateY(60%);
+  }
+  75% {
+    transform: translateX(20%) translateY(-40%);
+  }
+}
+@keyframes fullspin {
+  from  {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes colorer {
+  from, to {
+    background: red;
+  }
+  20% {
+    background: blue;
+  }
+  40% {
+    background: yellow;
+  }
+  60% {
+    background: orange;
+  }
+  80% {
+    background: purple;
+  }
+}
+
+@keyframes pulse {
+  from, to {
+    transform: scale(.25);
+  }
+  50% {
+    transform: scale(5);
+  }
+}
