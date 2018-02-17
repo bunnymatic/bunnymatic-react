@@ -1,0 +1,12 @@
+.main {
+  height: 100%;
+  flex-basis: 100%;
+  padding: 40px 0;
+}
+
+.image_blocks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}

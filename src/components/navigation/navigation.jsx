@@ -1,19 +1,13 @@
 import React, { Component } from 'react'
 import classnames from 'classnames';
 
+require ('./navigation.scss');
+
 class NavigationItem extends Component {
   constructor(thing) {
     console.log(thing);
     super()
     this.state = {hovering: false}
-  }
-
-  startHovering(ev) {
-    this.setState({hovering: true})
-  }
-
-  stopHovering(ev) {
-    this.setState({hovering: false})
   }
 
   iconOrName(item) {
@@ -25,14 +19,10 @@ class NavigationItem extends Component {
     return item.name;
   }
 
-  render(props) {
-    console.log('render nav item', props);
-    console.log('render nav item', this.props);
+  render() {
     return (
       <div
-      onMouseOver={ this.startHovering.bind(this) }
-        onMouseOut={ this.stopHovering.bind(this) }
-        className={ classnames( "navigation__item", {"hovering": this.state.hovering} ) } >
+        className="navigation__item" >
         <a href={this.props.path} title={this.props.title}>
           {this.iconOrName(this.props)}
         </a>
