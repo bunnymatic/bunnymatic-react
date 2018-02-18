@@ -14,8 +14,7 @@ const ComingSoon = (props) => {
         </div>
       </div>
       <h1>
-        <p>coming soon</p>
-        <p>the new bunnymatic.com</p>
+        <p>c o m i n g s o o n -  t h e n e w - b u n n y m a t i c . c o m</p>
       </h1>
     </div>
   );
