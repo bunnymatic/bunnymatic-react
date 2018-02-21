@@ -50,7 +50,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "deploy": "node scripts/build.js && surge build bunnymatic.surge.sh"
+    "deploy": "node scripts/build.js && surge build www.bunnymatic.com"
   },
   "jest": {
     "collectCoverageFrom": [
