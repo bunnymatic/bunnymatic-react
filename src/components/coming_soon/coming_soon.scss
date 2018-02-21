@@ -1,5 +1,5 @@
 .app-container {
-  animation: colorer 10s infinite;
+  animation: colorer 7s infinite;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,7 +28,7 @@ h1 {
   transform: translateZ(100px) translateX(-50%) translateY(-50%);
 }
 .scaler {
-  animation: pulse 4s infinite;
+  animation: pulse 5s infinite;
   animation-delay: 1s;
 }
 
@@ -40,7 +40,7 @@ h1 {
 .spinner {
   width: 25%;
   height: 25%;
-  animation: fullspin 5s infinite;
+  animation: fullspin 4s infinite;
   animation-delay: 3s;
 }
 
@@ -49,12 +49,12 @@ h1 {
     transform: translateX(0px) translateY(0px);
   }
   25% {
-    transform: translateX(80%) translateY(60%);
+    transform: translateX(90%) translateY(40%);
   }
   50% {
-    transform: translateX(-80%) translateY(60%);
+    transform: translateX(-120%) translateY(60%);
   }
-  75% {
+  85% {
     transform: translateX(20%) translateY(-40%);
   }
 }
@@ -68,26 +68,20 @@ h1 {
 }
 
 @keyframes colorer {
-  from, to {
-    background: red;
+  10% {
+    background: #111;
   }
-  20% {
-    background: blue;
-  }
-  40% {
-    background: yellow;
-  }
-  60% {
-    background: orange;
-  }
-  80% {
-    background: purple;
+  75% {
+    background: #dde;
   }
 }
 
 @keyframes pulse {
   from, to {
     transform: scale(.25);
+  }
+  20% {
+    transform: scale(1);
   }
   50% {
     transform: scale(5);
