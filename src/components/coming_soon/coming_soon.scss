@@ -26,6 +26,7 @@ h1 {
   z-index: 1;
   text-align: center;
   transform: translateZ(100px) translateX(-50%) translateY(-50%);
+  font-size: 8vh;
 }
 .scaler {
   animation: pulse 5s infinite;
