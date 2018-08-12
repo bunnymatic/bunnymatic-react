@@ -1,3 +1,5 @@
+@import "../../stylesheets/variables/colors";
+
 .app-container {
   animation: colorer 7s infinite;
   display: flex;
@@ -70,9 +72,15 @@ h1 {
 
 @keyframes colorer {
   10% {
-    background: #111;
+    background: $pink-3;
+  }
+  40% {
+    background: $green-1;
   }
   75% {
+    background: $lime-2;
+  }
+  90% {
     background: #dde;
   }
 }
