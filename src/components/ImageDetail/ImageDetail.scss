@@ -1,0 +1,22 @@
+.image-detail__container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 10px solid black;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.image-detail {
+  border: 1px solid blue;
+  width: 90%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255,255,255,1);
+}
