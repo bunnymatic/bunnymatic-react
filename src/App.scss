@@ -4,13 +4,6 @@
 @import './stylesheets/_reset.scss';
 @import './stylesheets/_base.scss';
 
-.app-container {
-  display: flex;
-  align-items: stretch;
-  justify-content: stretch;
-  flex-direction: column;
-}
-
 html, body, #root, .app-container {
   bottom: 0;
   top: 0;
@@ -18,5 +11,5 @@ html, body, #root, .app-container {
   height: 100%;
 }
 body {
-  padding: 2px;
+  padding: 0px;
 }

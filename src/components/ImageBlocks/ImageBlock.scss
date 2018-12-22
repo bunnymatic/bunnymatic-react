@@ -2,6 +2,7 @@
 
 .image-blocks {
   display: grid;
+  margin: 20px;
   grid-gap: 10px;
   grid-template: auto / repeat(1, 1fr);
   @include respond_above(xs) {
