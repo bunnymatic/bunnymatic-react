@@ -12,6 +12,8 @@
 }
 
 .image-detail {
+  position: relative;
+  padding: 40px;
   border: 1px solid blue;
   width: 90%;
   height: 80%;
@@ -19,4 +21,5 @@
   align-items: center;
   justify-content: center;
   background-color: rgba(255,255,255,1);
+  flex-direction: column;
 }
