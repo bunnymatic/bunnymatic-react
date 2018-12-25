@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-import './App.scss';
-import Navigation from './components/navigation/navigation';
-import Main from './pages/main';
+import React, { Component } from "react";
+import "./App.scss";
+import Main from "./pages/main";
 
 class App extends Component {
   render() {

@@ -1,0 +1,4 @@
+app/javascript/sharespost/js/vendor/**/*
+spec/javascripts/compiled/**/*
+public
+config/webpack/*

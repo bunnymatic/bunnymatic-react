@@ -1,0 +1,49 @@
+{
+  "env": {
+    "browser": true,
+    "jest": true,
+    "jasmine": true
+  },
+  "globals": {
+    "$": true,
+    "_": true,
+    "SharesPost": true,
+    "moment": true,
+    "process": true,
+    "Promise": true,
+    "Set": true,
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    }
+  },
+  "rules": {
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "jest/no-disabled-tests": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": {
+          "resolve": {
+            "modules": ["node_modules", "app/javascript", "app/javascript/sharespost/js", "app/javascript/packs"]
+          }
+        }
+      },
+      "node": { "extensions": [".js", ".jsx"] }
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:jest/recommended",
+    "plugin:react/recommended",
+    "prettier"
+  ]
+}

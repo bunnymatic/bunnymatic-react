@@ -1,4 +1,47 @@
 .image-detail__container {
+}
+
+.image-detail {
+  transition: all 2300ms ease-in-out;
+}
+
+.image-detail-appear {
+  border-color: yellow;
+}
+
+.image-detail-appear-active {
+  border-color: red;
+}
+
+.image-detail-enter {
+  opacity: 0.5;
+  color: red;
+  transform: scale(0);
+  transition: all 2300ms ease-in-out;
+}
+
+.image-detail-enter-active {
+  opacity: .5;
+  color: blue;
+  transform: scale(1);
+  transition: all 2300ms ease-in-out;
+}
+
+/* .image-detail-exit-active { */
+/*   opacity: 1; */
+/*   color: green; */
+/*   transform: scale(1); */
+/*   transition: all 2300ms ease-in-out; */
+/* } */
+
+/* .image-detail-exit { */
+/*   opacity: 0; */
+/*   color: yellow; */
+/*   transform: scale(0); */
+/* } */
+
+.image-detail__container {
+  z-index: 20;
   position: fixed;
   display: flex;
   align-items: center;
@@ -7,7 +50,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-  border: 10px solid black;
   background-color: rgba(255,255,255,0.5);
 }
 

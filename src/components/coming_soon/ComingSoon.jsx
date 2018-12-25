@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 import BunnymaticSvg from "./bunnymatic.svg";
 
-require('./coming_soon.scss');
+require("./coming_soon.scss");
 
-const ComingSoon = (props) => {
-  return(
+const ComingSoon = props => {
+  return (
     <div className="coming-soon">
       <div className="spinner" id="bunnymatic">
         <div className="scaler">
@@ -19,6 +19,6 @@ const ComingSoon = (props) => {
       </h1>
     </div>
   );
-}
+};
 
 export default ComingSoon;

@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
 
-export const idType = PropTypes.oneOfType([PropTypes.string, PropTypes.number]);
+export const numberOrStringType = PropTypes.oneOfType([PropTypes.string, PropTypes.number]);
+export const idType = numberOrStringType;
 
 export const imageType = PropTypes.shape({
   name: PropTypes.string.isRequired,
-  year: PropTypes.string,
+  year: numberOrStringType,
   src: PropTypes.string.isRequired,
-  id: PropTypes.idType
+  id: idType,
 });
