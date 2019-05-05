@@ -1,3 +1,4 @@
+/*eslint no-console:0 */
 import React, { Component, Fragment } from "react";
 import anime from "animejs";
 import Transition from "react-transition-group/Transition";

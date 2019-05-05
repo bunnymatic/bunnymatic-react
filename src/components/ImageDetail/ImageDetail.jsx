@@ -5,6 +5,9 @@ require("./ImageDetail.scss");
 require("./ImageDetailLabel.scss");
 
 class ImageLabel extends Component {
+  static propTypes = {
+    image: imageType,
+  };
   render() {
     const { image } = this.props;
     return (
