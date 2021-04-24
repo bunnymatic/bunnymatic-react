@@ -1,18 +1,18 @@
-import React, { Component } from "react";
+import React from "react";
 import { imageType } from "../../shared/types";
 
 require("./ImageBlock.scss");
 
-class ImageBlock extends Component {
-  static propTypes = {
-    image: imageType.isRequired,
-  };
-
-  render() {
-    const { image } = this.props;
-
-    return <div className="image-block" style={{ backgroundImage: `url('${image.src}')` }} />;
-  }
-}
+const ImageBlock = ({ image }) => {
+  return (
+    <div
+      className="image-block"
+      style={{ backgroundImage: `url('${image.src}')` }}
+    />
+  );
+};
+ImageBlock.propTypes = {
+  image: imageType.isRequired,
+};
 
 export default ImageBlock;

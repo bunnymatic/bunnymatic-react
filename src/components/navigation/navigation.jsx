@@ -3,30 +3,22 @@ import classnames from "classnames";
 
 require("./navigation.scss");
 
-class NavigationItem extends Component {
-  constructor(thing) {
-    console.log(thing);
-    super();
-    this.state = { hovering: false };
-  }
-
-  iconOrName(item) {
+const NavigationItem = (item) => {
+  const iconOrName = (item) => {
     if (item.icon) {
       return <i title={item.title} className={item.icon} />;
     }
     return item.name;
-  }
+  };
 
-  render() {
-    return (
-      <div className="navigation__item">
-        <a href={this.props.path} title={this.props.title}>
-          {this.iconOrName(this.props)}
-        </a>
-      </div>
-    );
-  }
-}
+  return (
+    <div className="navigation__item">
+      <a href={item.path} title={item.title}>
+        {iconOrName(item)}
+      </a>
+    </div>
+  );
+};
 
 const navItems = [
   {
@@ -58,7 +50,7 @@ class Navigation extends Component {
   }
 
   navItems() {
-    const items = navItems.map(item => {
+    const items = navItems.map((item) => {
       console.log("sending", item);
       return <NavigationItem {...item} key={item.name} />;
     });

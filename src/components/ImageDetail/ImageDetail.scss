@@ -16,15 +16,21 @@
 .image-detail {
   transition: all 2300ms ease-in-out;
   position: relative;
-  padding: 40px;
+  padding: 30px;
   border: 1px solid blue;
-  width: 90%;
-  height: 80%;
+  width: 97%;
+  height: 97%;
   display: flex;
   align-items: center;
-  justify-contnt: center;
+  justify-content: flex-start;
   background-color: rgba(255,255,255,1);
   flex-direction: column;
+}
+
+.image-detail__image {
+  object-fit: contain;
+  width: 100%;
+  height: 90%;
 }
 
 .image-detail-appear {
@@ -36,28 +42,28 @@
 }
 
 .image-detail-enter {
-  opacity: 0.5;
+  opacity: 0.2;
   color: red;
   transform: scale(0);
-  transition: all 2300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 .image-detail-enter-active {
-  opacity: .5;
+  opacity: 1;
   color: blue;
   transform: scale(1);
-  transition: all 2300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
-/* .image-detail-exit-active { */
-/*   opacity: 1; */
-/*   color: green; */
-/*   transform: scale(1); */
-/*   transition: all 2300ms ease-in-out; */
-/* } */
+.image-detail-exit {
+  opacity: 1;
+  color: yellow;
+  transform: scale(1);
+}
 
-/* .image-detail-exit { */
-/*   opacity: 0; */
-/*   color: yellow; */
-/*   transform: scale(0); */
-/* } */
+.image-detail-exit-active {
+  opacity: 1;
+  color: green;
+  transform: scale(0);
+  transition: all 2300ms ease-in-out;
+}
