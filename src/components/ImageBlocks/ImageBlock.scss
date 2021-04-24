@@ -1,0 +1,32 @@
+@import "../../stylesheets/mixins/media_query_responders";
+
+.image-blocks {
+  display: grid;
+  margin: 20px;
+  grid-gap: 10px;
+  grid-template: auto / repeat(1, 1fr);
+  @include respond_above(xs) {
+    grid-template: auto / repeat(2, 1fr);
+  }
+
+  @include respond_above(sm) {
+    grid-template: auto / repeat(3, 1fr);
+  }
+
+  @include respond_above(md) {
+    grid-template: auto / repeat(4, 1fr);
+  }
+}
+
+.image-block {
+  border: 1px solid red;
+  height: 250px;
+  width: 250px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}

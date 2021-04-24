@@ -3,19 +3,13 @@
 @import './stylesheets/variables/_colors.scss';
 @import './stylesheets/_reset.scss';
 @import './stylesheets/_base.scss';
-@import './components/navigation/_navigation.scss';
-@import './pages/_main.scss';
-
-
-.app-container {
-  display: flex;
-  align-items: stretch;
-  justify-content: stretch;
-}
 
 html, body, #root, .app-container {
   bottom: 0;
   top: 0;
   position: relative;
   height: 100%;
+}
+body {
+  padding: 0px;
 }

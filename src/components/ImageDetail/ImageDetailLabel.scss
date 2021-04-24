@@ -1,0 +1,15 @@
+.image-detail-label__container {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.image-detail-label {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 10px;
+  margin: 20px;
+}

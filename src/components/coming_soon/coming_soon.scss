@@ -1,7 +1,5 @@
-@import "../../stylesheets/variables/colors";
-
 .app-container {
-  animation: colorer 7s infinite;
+  animation: colorer 10s infinite;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,16 +20,16 @@ h1 {
   position: fixed;
   top: 50%;
   left: 50%;
-  font-size: 50px;
+  font-size: 40px;
   color: white;
   margin: auto;
   z-index: 1;
   text-align: center;
+  padding: 40px;
   transform: translateZ(100px) translateX(-50%) translateY(-50%);
-  font-size: 8vh;
 }
 .scaler {
-  animation: pulse 5s infinite;
+  animation: pulse 4s infinite;
   animation-delay: 1s;
 }
 
@@ -43,7 +41,7 @@ h1 {
 .spinner {
   width: 25%;
   height: 25%;
-  animation: fullspin 4s infinite;
+  animation: fullspin 5s infinite;
   animation-delay: 3s;
 }
 
@@ -52,12 +50,12 @@ h1 {
     transform: translateX(0px) translateY(0px);
   }
   25% {
-    transform: translateX(90%) translateY(40%);
+    transform: translateX(80%) translateY(60%);
   }
   50% {
-    transform: translateX(-120%) translateY(60%);
+    transform: translateX(-80%) translateY(60%);
   }
-  85% {
+  75% {
     transform: translateX(20%) translateY(-40%);
   }
 }
@@ -71,26 +69,26 @@ h1 {
 }
 
 @keyframes colorer {
-  10% {
-    background: $pink-3;
+  from, to {
+    background: red;
+  }
+  20% {
+    background: blue;
   }
   40% {
-    background: $green-1;
+    background: yellow;
   }
-  75% {
-    background: $lime-2;
+  60% {
+    background: orange;
   }
-  90% {
-    background: #dde;
+  80% {
+    background: purple;
   }
 }
 
 @keyframes pulse {
   from, to {
     transform: scale(.25);
-  }
-  20% {
-    transform: scale(1);
   }
   50% {
     transform: scale(5);
