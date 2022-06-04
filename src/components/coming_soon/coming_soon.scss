@@ -47,6 +47,11 @@ h1 {
   animation-delay: 3s;
 }
 
+.textSpinner {
+  animation: rocking 5s infinite;
+  animation-delay: 1s;
+}
+
 @keyframes zoomer {
   from, to {
     transform: translateX(0px) translateY(0px);
@@ -67,6 +72,24 @@ h1 {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes rocking {
+  from, to  {
+    transform: rotate(0) scale(1);
+    width: 100%;
+  }
+  33% {
+    transform: rotate(20deg) scale(1.4);
+    width: 130%;
+  }
+  66% {
+    transform: rotate(-40deg) scale(.8);
+    width: 70%;
+  }
+  100% {
+    transform: rotate(360deg)
   }
 }
 
